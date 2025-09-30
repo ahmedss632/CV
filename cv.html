@@ -1,0 +1,212 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Ahmed Hamada — CV</title>
+  <style>
+    :root{
+      --accent:#0f172a;
+      --muted:#6b7280;
+      --card:#ffffff;
+      --bg:#f3f4f6;
+      --accent-2:#0369a1;
+      --print-font: "Times New Roman", serif;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+      background:var(--bg);
+      color:#0b1220;
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
+      padding:30px;
+    }
+    .sheet{
+      max-width:900px;
+      margin:0 auto;
+      background:linear-gradient(180deg,#fff,#fff);
+      padding:28px;
+      border-radius:8px;
+      box-shadow:0 10px 30px rgba(2,6,23,0.08);
+    }
+
+    header{
+      display:flex;
+      gap:20px;
+      align-items:center;
+      border-bottom:1px solid #e6edf3;
+      padding-bottom:18px;
+      margin-bottom:18px;
+    }
+    .avatar{
+      width:84px;
+      height:84px;
+      border-radius:8px;
+      background:linear-gradient(135deg,var(--accent-2),#7dd3fc);
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      color:white;
+      font-weight:700;
+      font-size:26px;
+      flex:0 0 84px;
+    }
+    .head-right h1{
+      margin:0;
+      font-size:22px;
+      letter-spacing:0.2px;
+    }
+    .head-right p{margin:6px 0 0;color:var(--muted);font-size:14px}
+
+    .grid{
+      display:grid;
+      grid-template-columns: 1fr 320px;
+      gap:24px;
+    }
+
+    .card{
+      background:var(--card);
+      padding:16px;
+      border-radius:8px;
+      border:1px solid #eef2f6;
+    }
+
+    h2{
+      margin:0 0 8px;
+      font-size:16px;
+      color:var(--accent);
+    }
+    p.small{margin:0;color:var(--muted);font-size:14px}
+
+    /* left column */
+    .section{margin-bottom:16px}
+    .skills-list{display:flex;flex-wrap:wrap;gap:8px}
+    .chip{background:#eef7fb;color:#013047;padding:6px 10px;border-radius:999px;font-size:13px;border:1px solid rgba(1,48,71,0.06)}
+
+    .project{margin-bottom:10px}
+    .project b{display:block}
+    .meta{color:var(--muted);font-size:13px;margin-top:6px}
+
+    /* right column */
+    .contact-row{display:flex;gap:10px;flex-direction:column}
+    .contact-row div{display:flex;gap:8px;align-items:center;color:var(--muted);font-size:14px}
+    .lang{display:flex;flex-direction:column;gap:6px}
+    .lang span{font-size:14px;color:#0b1220}
+
+    footer{margin-top:18px;text-align:center;color:var(--muted);font-size:13px}
+
+    /* print */
+    @media print{
+      body{background:white;padding:0}
+      .sheet{box-shadow:none;border-radius:0;margin:0;padding:18px}
+      header, .card{border:none}
+      @page{size:A4;margin:12mm}
+      body, .sheet{font-family: var(--print-font)}
+    }
+
+    /* responsive */
+    @media (max-width:880px){
+      .grid{grid-template-columns:1fr; padding-bottom:10px}
+      header{flex-direction:row;gap:12px}
+      .avatar{width:68px;height:68px}
+    }
+
+    /* Arabic CV section */
+    .arabic{direction:rtl;font-family: "Arial", "Segoe UI", sans-serif;margin-top:34px}
+    .arabic h1{font-size:20px;margin-bottom:6px}
+    .arabic p{color:var(--muted);margin:4px 0}
+    .arabic .row{display:flex;gap:12px}
+    .arabic .col{flex:1}
+    .muted-box{background:#fbfdff;padding:10px;border-radius:6px;border:1px solid #eef6fb}
+  </style>
+</head>
+<body>
+  <div class="sheet">
+    <header>
+      <div class="avatar">AH</div>
+      <div class="head-right">
+        <h1>Ahmed Hamada Abouhalawa Abdelrahman Ibrahim</h1>
+        <p class="small">Front-End Developer — HTML / CSS / JavaScript / React</p>
+      </div>
+    </header>
+
+    <div class="grid">
+      <!-- left -->
+      <div>
+        <div class="card section">
+          <h2>Objective</h2>
+          <p class="small">Motivated Front-End Developer with strong knowledge of modern web technologies (HTML, CSS, JavaScript, React, and Tailwind). Passionate about building responsive, user-friendly interfaces and eager to contribute to dynamic development teams.</p>
+        </div>
+
+        <div class="card section">
+          <h2>Skills</h2>
+          <div class="skills-list">
+            <div class="chip">HTML5</div>
+            <div class="chip">CSS3</div>
+            <div class="chip">JavaScript (ES6+)</div>
+            <div class="chip">React.js</div>
+            <div class="chip">Tailwind CSS</div>
+            <div class="chip">Bootstrap</div>
+            <div class="chip">Git & GitHub</div>
+            <div class="chip">Responsive Design</div>
+            <div class="chip">REST APIs / Axios</div>
+          </div>
+        </div>
+
+        <div class="card section">
+          <h2>Projects</h2>
+
+          <div class="project">
+            <b>ToDo List App</b>
+            <div class="meta">React + LocalStorage — Manage tasks with add/edit/delete & persistence</div>
+          </div>
+
+          <div class="project">
+            <b>E-commerce Frontend</b>
+            <div class="meta">React + Redux + Bootstrap — Product listing, cart, quantity updates</div>
+          </div>
+
+          <div class="project">
+            <b>Login System</b>
+            <div class="meta">React + Axios — Authentication UI connected to API</div>
+          </div>
+        </div>
+
+        <div class="card section">
+          <h2>Education</h2>
+          <p class="small">[Add your University / Institute name, Major, Year]</p>
+        </div>
+
+      </div>
+
+      <!-- right -->
+      <aside>
+        <div class="card section contact-row">
+          <h2>Contact</h2>
+          <div>📞 01023347266</div>
+          <div>✉ ahmedhalaw66@icloud.com</div>
+          <div>📍 Egypt</div>
+        </div>
+
+        <div class="card section">
+          <h2>Languages</h2>
+          <div class="lang">
+            <span>Arabic — Native</span>
+            <span>English — Good (Reading, Writing, Speaking)</span>
+          </div>
+        </div>
+
+        <div class="card section">
+          <h2>Notes</h2>
+          <p class="small">No LinkedIn or GitHub yet — consider creating them and linking projects. Add any internships or certificates here.</p>
+        </div>
+
+      </aside>
+    </div>
+
+    <footer>CV generated for Ahmed Hamada — edit fields as needed. Save as PDF via browser Print → Save as PDF.</footer>
+  </div>
+</body>
+</html>
